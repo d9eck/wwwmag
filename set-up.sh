@@ -1,8 +1,4 @@
-#!/usr/bin/env bash
-
-
-
-git clone https://github.com/d9eck/wwwmag.git
+#!/bin/sh
 
 cd wwwmag
 chown -R bitnami:daemon .
