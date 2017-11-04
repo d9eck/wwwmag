@@ -21,7 +21,7 @@ mv pub/media/wysiwyg /bitnami/magento/htdocs/pub/media/
 ln -sf /bitnami/magento/htdocs/pub/media/wysiwyg /opt/bitnami/magento/htdocs/pub/media/wysiwyg
 
 cd /opt/bitnami/magento/htdocs
-sudo -u bitnami php bin/magento setup:upgrade
-sudo -u bitnami php bin/magento setup:di:compile
-sudo -u bitnami php bin/magento setup:static-content:deploy
-sudo -u bitnami php bin/magento cache:clean && php bin/magento cache:flush
+php bin/magento setup:upgrade
+php bin/magento setup:di:compile
+php bin/magento setup:static-content:deploy
+php bin/magento cache:clean && php bin/magento cache:flush
