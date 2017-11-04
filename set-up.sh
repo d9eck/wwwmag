@@ -1,10 +1,9 @@
 #!/bin/sh
 
-cd wwwmag
 chown -R bitnami:daemon .
 find pub/media -type f -exec chmod g+w {} \;
 find pub/media -type d -exec chmod g+ws {} \;
-cd ..
+
 
 mv wwwmag/app/design/frontend/Smartwave /bitnami/magento/htdocs/app/design/frontend/
 ln -sf /bitnami/magento/htdocs/app/design/frontend/Smartwave /opt/bitnami/magento/htdocs/app/design/frontend/Smartwave
