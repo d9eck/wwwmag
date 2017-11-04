@@ -1,10 +1,12 @@
 #!/bin/sh
 
-chown -R bitnami:daemon .
+mkdir /bitnami/magento/htdocs/app/design
+mkdir /bitnami/magento/htdocs/app/design/frontend
+
+chown -R bitnami:daemon ./
 find pub/media -type f -exec chmod g+w {} \;
 find pub/media -type d -exec chmod g+ws {} \;
-
-
+ 
 mv app/design/frontend/Smartwave /bitnami/magento/htdocs/app/design/frontend/
 ln -sf /bitnami/magento/htdocs/app/design/frontend/Smartwave /opt/bitnami/magento/htdocs/app/design/frontend/Smartwave
 mv app/code /bitnami/magento/htdocs/app/
